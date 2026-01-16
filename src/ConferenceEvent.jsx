@@ -81,6 +81,7 @@ const ConferenceEvent = () => {
                     </button>
                 </div>
             </navbar>
+            
             <div className="main_container">
                 {!showItems
                     ?
@@ -147,8 +148,8 @@ const ConferenceEvent = () => {
                                             </div>
                                         ))}
                                     </div>
-        <div className="total_cost">Total Cost: ${venueTotalCost}</div>
-      </div>
+                                    <div className="total_cost">Total Cost: ${venueTotalCost}</div>
+                                </div>
 
                             {/*Necessary Add-ons*/}
                             <div id="addons" className="venue_container container_main">
@@ -175,12 +176,10 @@ const ConferenceEvent = () => {
                                     <h1>Meals Selection</h1>
                                 </div>
 
-                                <div className="input-container venue_selection">
+                                <div className="input-container venue_selection"></div>
 
-                                </div>
-                                <div className="meal_selection">
+                                <div className="meal_selection"></div>
 
-                                </div>
                                 <div className="total_cost">Total Cost: </div>
 
 
