@@ -46,6 +46,8 @@ const ConferenceEvent = () => {
     };
 
     const handleMealSelection = (index) => {
+        const item = mealsItems[index];
+        if (items.selected && item.type )
        
     };
 
@@ -214,7 +216,24 @@ const ConferenceEvent = () => {
                                     <input type = "number" className="input_box5" id="numberOfPeople" value={numberOfPeople}
                                         onChange={(e)=>setNumberOfPeople(parseInt(e.target.value))} min="1"/>
 
-                                <div className="meal_selection"></div>
+                                <div className="meal_selection">
+                                    {
+                                        mealsItems.map((item,index)=>(
+                                            <div className="meal_item" key={index} style={{padding: 15}}>
+                                                <div className="inner">
+                                                    <input type="checkbox" id={`meal_${index}`}
+                                                        checked={item.selected}
+                                                        onChange={()=> handleMealSelection(index)}/>
+                                                    
+                                                    <label htmlFor = {`meal_${index}`}>{item.name}</label>
+                                                    <div className="meal_cost">${item.cost}</div>
+
+                                                </div>
+
+                                            </div>
+                                        ))
+                                    }
+                                </div>
 
                                 <div className="total_cost">Total Cost: </div>
 
