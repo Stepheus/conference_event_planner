@@ -12,9 +12,7 @@ export const mealsSlice = createSlice({
   ],
   reducers: {
     toggleMealSelection: (state, action) => {
-        if(state[payload.index]){
-            state[payload.index].selected= !state[index].selected;
-        }
+        state[action.payload].selected = !state[action.payload].selected
     },
   },
 });
